@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <script src="./Button.js"></script>
+    <script src="./Frame.js"></script>
+    <script src="./Player.js"></script>
+    <script src="/Table.js"></script>
+    <script src="./Input.js"></script>
+
+    <script>
+        const input = new Input();
+        const button = new Button('Reload Page', () => window.location.reload());
+
+        const wrapperInput = document.createElement('div');
+        wrapperInput.id = 'wrapperInputId';
+        wrapperInput.appendChild(input.render());
+        document.body.appendChild(wrapperInput);
+
+        const wrapperButton = document.createElement('div');
+        wrapperButton.id = 'wrapperButtonId';
+        wrapperButton.appendChild(button.render());
+        document.body.appendChild(wrapperButton);
+    </script>
+
+    <div id="tableWithResults">
+    </div>
+
+</body>
+
+</html>
