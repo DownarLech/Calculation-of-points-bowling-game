@@ -42,7 +42,7 @@ class Table {
             if (data.hasOwnProperty(key)) {
                 if (Array.isArray(data[key])) {
                     for (let i = 0; i < data[key].length+2; i++) {
-                        this.createThElementAndAddToRow(headerRow, i);
+                        this.createThElementAndAddToRow(headerRow, i+1);
                     
                     }
                 }
